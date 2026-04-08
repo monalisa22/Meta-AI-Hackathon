@@ -1,3 +1,13 @@
+---
+title: LintMind
+emoji: 🔍
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 🔍 Code Review Intelligence Environment
 
 An OpenEnv-compliant environment for evaluating AI agents on real-world code review tasks, including bug detection, security auditing, and refactoring analysis.
