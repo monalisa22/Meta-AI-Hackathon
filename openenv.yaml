@@ -1,0 +1,47 @@
+name: code-review-env
+version: 1.0.0
+description: "Code Review Intelligence Environment - Simulates intelligent code review tasks for bug detection, security auditing, and refactoring suggestions"
+author: "Meta Hackathon Team"
+tags:
+  - code-review
+  - developer-tools
+  - bug-detection
+  - security-audit
+  - refactoring
+  - openenv
+
+tasks:
+  - id: bug_detection
+    name: "Bug Detection"
+    difficulty: easy
+    description: "Identify common bugs in Python code snippets"
+    max_steps: 30
+    
+  - id: security_audit
+    name: "Security Vulnerability Assessment"
+    difficulty: medium
+    description: "Detect security issues across multiple related files"
+    max_steps: 50
+    
+  - id: refactoring_analysis
+    name: "Cross-File Refactoring Analysis"
+    difficulty: hard
+    description: "Analyze codebase and suggest architectural improvements"
+    max_steps: 100
+
+action_space:
+  type: "structured"
+  schema: "Action model defined in models.py"
+  
+observation_space:
+  type: "structured"
+  schema: "Observation model defined in models.py"
+
+reward_range:
+  min: 0.0
+  max: 1.0
+
+environment:
+  type: "code-review"
+  language: "python"
+  real_world_task: true
